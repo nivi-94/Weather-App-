@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: WEATHER APP
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app"
+    envVars:
+      - key: API_KEY
+        value: 04c9f4944719cf8c730037388318c80c
